@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-import javax.swing.JFileChooser;
+import javax.swing.JFileChooser;  // wow that's a lot of imports
 
 public class E01Stats {
 
@@ -27,8 +27,28 @@ public class E01Stats {
 		//Using scanner to read from a file
 		//Modify and add to the code below
 		//to complete the exercise
+
+		double min = 999999999999999999999999999999999999999999999999999999999999999999999999999.9;
+		double max = 0;
+		double total = 0;
+		int count = 0;
+
 		while(in.hasNextDouble()) {
-			System.out.println(in.nextDouble());
+			double nextDouble = in.nextDouble();
+			if (min>nextDouble){
+				min=nextDouble;
+			}
+			if (max<nextDouble){
+				max=nextDouble;
+			}
+			total+=nextDouble;
+			count++;
 		}
+
+		double average = total/count;
+		System.out.println("Max: " + max);
+		System.out.println("Min: " + min);
+		System.out.println("Average: " + average);
+		System.out.println("Number of values in file: " + count);
 	}
 }
