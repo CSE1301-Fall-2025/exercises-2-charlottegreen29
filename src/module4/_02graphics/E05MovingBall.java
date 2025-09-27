@@ -15,6 +15,8 @@ public class E05MovingBall {
 		
 		StdDraw.setPenColor(Color.RED);
 		StdDraw.setPenRadius(0.05);
+
+		boolean ballMovingRight = true;
 		
 		while (true) {
 			
@@ -22,9 +24,17 @@ public class E05MovingBall {
 			StdDraw.clear();
 			
 			//update the ball position
-			ballX = ballX + 0.005;
-			if(ballX > 1) { //too far right
-				ballX = 0; //back to left
+			if (ballMovingRight==true){
+				ballX = ballX + 0.005;
+			}
+			else{
+				ballX = ballX - 0.005;
+			}
+			if(ballX > 0.975) { //too far right
+				ballMovingRight=false; //back to left
+			}
+			if(ballX<0.025){
+				ballMovingRight=true;
 			}
 			
 			//draw on canvas

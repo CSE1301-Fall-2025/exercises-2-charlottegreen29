@@ -15,12 +15,18 @@ public class E06MouseFollower {
 	public static void main(String[] args) {
 
 		StdDraw.enableDoubleBuffering();
+
+		StdDraw.setPenColor(150,40,100);
+		StdDraw.setPenRadius(0.04);
+
 		while (true) {
 			StdDraw.clear();
 			//
 			// Render one frame of your animation below here
 			//
-
+			double x = StdDraw.mouseX();
+			double y = StdDraw.mouseY();
+			StdDraw.point(x, y);
 
 			//  
 			// End of your frame
@@ -28,7 +34,7 @@ public class E06MouseFollower {
 			// Stdraw.show() achieves double buffering and
 			//   the pause(10) avoids the tight spinning loop
 			StdDraw.show();
-			StdDraw.pause(10);
+			StdDraw.pause(100);
 		}
 
 	}

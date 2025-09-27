@@ -9,21 +9,37 @@ public class E04WaitPoint {
 	 * step at a time.
 	 */
 	public static void main(String[] args) {
-		// wait for the mouse to be pressed and released
+		
+		boolean qPressed=false;
 
-		// here, the mouse has been pressed
+		StdDraw.setPenColor(0,0,0);
+		StdDraw.setPenRadius(0.02);
 
-		// here the mouse is released
-		
-		
-		// draw a point at the location of the mouse
-		
-		
-		// here, a q has been typed
-		
-		
+		while (qPressed==false){
+			double x = StdDraw.mouseX();
+			double y = StdDraw.mouseY();
+
+			// wait for the mouse to be pressed and released
+			boolean isPressed = StdDraw.mousePressed();
+
+			// draw a point at the location of the mouse
+			if (isPressed==true){
+				StdDraw.point(x,y);
+				}
+			
+			// here, a q has been typed
+			if (StdDraw.hasNextKeyTyped()) {
+				char got = StdDraw.nextKeyTyped();
+    			if (got == 'q') {
+        			qPressed = true;
+    				}
+				}
+
+			}
+
 		StdDraw.text(0.5, 0.5, "Farewell!");
 
-	}
+		}
+		
 
-}
+	}
