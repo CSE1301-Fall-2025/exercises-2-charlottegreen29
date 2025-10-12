@@ -18,11 +18,13 @@ public class E01Song {
 		System.out.println( "Everywhere a " + noise + "-" + noise );
 		System.out.println( "Old MacDonald had a farm" );
 		System.out.println( "E-I-E-I-O" );
+		System.out.println();
 	}
 
 	public static void main(String[] args) {
 		verse( "cow" , "moo" );
 		verse( "duck" , "quack" );
+		verse("pig" , "oink");
 	}
 }
 

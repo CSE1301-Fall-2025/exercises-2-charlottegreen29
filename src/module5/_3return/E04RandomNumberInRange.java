@@ -8,8 +8,15 @@ package module5._3return;
  */
 public class E04RandomNumberInRange {
 	//add your method here
+	public static int randomNumberInRange(int min, int max){
+		int range = max - min + 1;
+		int num = (int)(Math.random()*range+min);
+		return num;
+	}
+
 
 	public static void main(String args[]) {
 		//test your method by calling it
+		System.out.print(randomNumberInRange(2,5));
 	}
 }

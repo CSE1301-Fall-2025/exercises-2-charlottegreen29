@@ -12,7 +12,7 @@ public class E01VolumeExample {
 
 	public static void main(String args[]) {
 		// Calculate the volume of a cylinder  radius=4 and height=10
-		double vol = volumeCylinder(4, 10);
+		double vol = volumeCylinder(1, 2);
 		System.out.println(vol);
 	}
 }

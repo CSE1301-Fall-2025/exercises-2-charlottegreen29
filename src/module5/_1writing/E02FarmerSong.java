@@ -7,10 +7,14 @@ package module5._1writing;
  */
 public class E02FarmerSong {
 
+	public static void refrain(){
+		System.out.println("The tag is in the back");
+	}
+
 	public static void main(String[] args) {
-		System.out.println("The farmer in the dell");
-		System.out.println("The farmer in the dell");
+		refrain();
+		refrain();
 		System.out.println("Hi-ho the derry-o");
-		System.out.println("The farmer in the dell");
+		refrain();
 	}
 }
