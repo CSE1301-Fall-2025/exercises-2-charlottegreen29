@@ -17,6 +17,6 @@ public class E04RandomNumberInRange {
 
 	public static void main(String args[]) {
 		//test your method by calling it
-		System.out.print(randomNumberInRange(2,5));
+		System.out.print(randomNumberInRange(1,20));
 	}
 }

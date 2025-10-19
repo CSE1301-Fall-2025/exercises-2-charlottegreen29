@@ -68,6 +68,20 @@ public class StringMethods {
 	//Think about the string you want to appear between the copies, so that it appears the strings were concatenated together as before.
 	///done, thought I think that makes things more complicated than it needs to be.
 	/// I had to use the \u0000 unicode for my empty char.
+	
+
+	//// Okay, I'm in class doing another practice problem, which is to make a method that finds the max value of an int array.
+	public static int maxValue(int[] array){
+		int maxVal=array[0];
+		for (int i=0;i<array.length;i++){
+			if (array[i]>maxVal){
+				maxVal=array[i];
+			}
+		}
+		return maxVal;
+	}
+
+
 	public static void main(String[] args) {
 
 		//
@@ -90,6 +104,15 @@ public class StringMethods {
 		System.out.println();
 
 		System.out.print(join(splitExample,':'));
+
+		System.out.println();
+		System.out.println();
+
+		int[] lesMisArray = {2,4,6,0,1};
+		System.out.println(maxValue(lesMisArray));
+
+		int[] negLesMis = {-2,-4,-6,0,-1};
+		System.out.println(maxValue(negLesMis));
 		
 	}
 }
