@@ -13,8 +13,20 @@ public class E01FactorialTest {
 			return n * factorial(n - 1);
 		}
 	}
+
+public static void mystery (int x) {
+   System.out.print(x % 10);
+   if ((x / 10) != 0) {
+      mystery(x / 10);
+   }
+   System.out.print(x % 10);
+}
 	
 	public static void main(String[] args) {
 		System.out.println(factorial(4));
+		System.out.println(factorial(6));
+		System.out.println(factorial(1));
+		System.out.println();
+		mystery(1234); // I copypasted the mystery code in here so I could look at it with the debugger.
 	}
 }
