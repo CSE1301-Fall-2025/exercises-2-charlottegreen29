@@ -5,7 +5,7 @@ import java.awt.event.KeyEvent;
 
 import edu.princeton.cs.introcs.StdDraw;
 
-public class E05MovingBall {
+public class E05MovingBallLectureVersion {
 
 	/*
 	 * Exercise: Read and run the code below and make sure you

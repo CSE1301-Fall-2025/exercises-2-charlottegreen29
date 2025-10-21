@@ -14,7 +14,7 @@ public class GraphPaper {
 	 */
 	public static void gp(double llx, double lly, double size) {
 		// base case, stop when the size is sufficiently small
-		if (size < .05) { /// you can use this to change the size of your grid
+		if (size < .03) { /// you can use this to change the size of your grid
 			return;  // abandon recursion
 		}
 		// draw one horizontal and one vertical line to quadrisect
@@ -23,12 +23,7 @@ public class GraphPaper {
 		StdDraw.line(llx+(size/2), lly, llx+(size/2), lly+size);
 		StdDraw.line(llx, lly+(size/2), llx+size, lly+(size/2));
 		
-		// 
-		// Now, after you have drawn those two lines,
-		// let's pause to **accentuate the recursive drama**
-		//
-		StdDraw.pause(500);
-		//
+		
 		//
 		// Now recursively consider the
 		//   lower left, uppert left, upper right, lower right
@@ -43,7 +38,7 @@ public class GraphPaper {
 	}
 
 	public static void main(String[] args) {
-		StdDraw.setPenColor(Color.RED);
+		StdDraw.setPenColor(Color.BLUE);
 		// 
 		// Once you get things working, you an uncomment the two
 		//   calls below to StdDraw.show
